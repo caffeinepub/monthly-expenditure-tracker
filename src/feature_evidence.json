@@ -1,0 +1,157 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-frontend-form-to-add-new-expense-entries-with-fields-for-amount-category-description-and-date",
+      "featureTitle": "Create a frontend form to add new expense entries with fields for amount, category, description, and date",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/ExpenseForm.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-frontend-form-to-set-or-update-monthly-earnings-for-a-specific-month-and-year",
+      "featureTitle": "Create a frontend form to set or update monthly earnings for a specific month and year",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/EarningsForm.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-frontend-dashboard-displaying-category-wise-expense-breakdown-for-the-selected-month-showing-each-category-with-its-total-amount-and-percentage-of-total-expenses",
+      "featureTitle": "Create a frontend dashboard displaying category-wise expense breakdown for the selected month, showing each category with its total amount and percentage of total expenses",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/CategoryBreakdown.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-frontend-summary-section-displaying-total-earnings-total-expenses-and-calculated-savings-for-the-selected-month",
+      "featureTitle": "Create a frontend summary section displaying total earnings, total expenses, and calculated savings for the selected month",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/MonthlySummary.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-10"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-frontend-list-view-displaying-all-individual-expense-entries-for-the-selected-month-with-options-to-edit-or-delete-each-entry",
+      "featureTitle": "Create a frontend list view displaying all individual expense entries for the selected month with options to edit or delete each entry",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/ExpenseList.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-11"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-month-and-year-selector-in-the-frontend-to-allow-users-to-view-data-for-different-months",
+      "featureTitle": "Implement month and year selector in the frontend to allow users to view data for different months",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/MonthYearSelector.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-12"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-design-a-cohesive-visual-theme-with-warm-approachable-colors-such-as-earthy-tones-or-soft-gradients-clean-typography-with-good-hierarchy-for-numbers-and-categories-and-a-card-based-layout-that-separates-summary-metrics-category-breakdown-and-expense-details-into-distinct-scannable-sections",
+      "featureTitle": "Design a cohesive visual theme with warm, approachable colors (such as earthy tones or soft gradients), clean typography with good hierarchy for numbers and categories, and a card-based layout that separates summary metrics, category breakdown, and expense details into distinct, scannable sections",
+      "files": [
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-13"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-display-generated-images-as-static-assets-from-frontend-public-assets-generated-in-the-appropriate-ui-locations",
+      "featureTitle": "Display generated images as static assets from frontend/public/assets/generated in the appropriate UI locations",
+      "files": [
+        "frontend/src/components/CategoryBreakdown.tsx",
+        "frontend/src/components/MonthlySummary.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-14"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

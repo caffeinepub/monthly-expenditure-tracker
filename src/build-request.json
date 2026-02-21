@@ -1,0 +1,266 @@
+{
+  "kind": "build_request",
+  "title": "Create monthly expenditure tracker with category-wise breakdown and savings calculation",
+  "projectName": "Expense Tracker",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a backend data model to store expense entries with fields: id, amount, category, description, date, and timestamp",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Expense entries can be created with all required fields",
+        "Each expense has a unique identifier",
+        "Date and timestamp are properly stored for chronological tracking"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Create a backend data model to store monthly earnings with fields: id, amount, month, year, and timestamp",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Earnings can be set for specific months and years",
+        "Only one earnings entry per month-year combination",
+        "Amount is stored as a numeric value"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Implement backend functions to add, update, delete, and retrieve expense entries",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Expenses can be added with validation",
+        "Expenses can be updated by id",
+        "Expenses can be deleted by id",
+        "Expenses can be retrieved filtered by date range"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Implement backend functions to set and retrieve monthly earnings",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Monthly earnings can be set or updated for a specific month and year",
+        "Monthly earnings can be retrieved for a specific month and year",
+        "Returns zero or appropriate default when no earnings are set"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Implement backend function to calculate total expenses by category for a given month and year",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "category wise"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Returns a list of categories with their total expense amounts",
+        "Calculation is accurate for the specified month and year",
+        "Handles empty categories appropriately"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Implement backend function to calculate savings as the difference between monthly earnings and total expenses for a given month and year",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "savings done out of total earnings"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Savings calculation is accurate (earnings minus total expenses)",
+        "Returns negative values when expenses exceed earnings",
+        "Works correctly when no earnings are set"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Create a frontend form to add new expense entries with fields for amount, category, description, and date",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Form validates required fields before submission",
+        "Category can be selected from predefined options or entered as custom text",
+        "Date defaults to current date but can be changed",
+        "Success feedback is shown after successful submission"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Create a frontend form to set or update monthly earnings for a specific month and year",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "User can input monthly earnings amount",
+        "Month and year can be selected",
+        "Form validates positive numeric input",
+        "Success feedback is shown after saving"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Create a frontend dashboard displaying category-wise expense breakdown for the selected month, showing each category with its total amount and percentage of total expenses",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "category wise and detail bifurcation"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Categories are listed with their total expense amounts",
+        "Percentage breakdown is calculated and displayed for each category",
+        "Data updates when a different month is selected",
+        "Visual representation makes it easy to compare categories"
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "text": "Create a frontend summary section displaying total earnings, total expenses, and calculated savings for the selected month",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "savings done out of total earnings"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Shows monthly earnings prominently",
+        "Shows total expenses for the month",
+        "Shows calculated savings (earnings minus expenses)",
+        "Visual indicators distinguish positive savings from negative (overspending)",
+        "Updates when month selection changes"
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "text": "Create a frontend list view displaying all individual expense entries for the selected month with options to edit or delete each entry",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "detail bifurcation"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All expenses for the selected month are listed",
+        "Each entry shows date, category, description, and amount",
+        "Edit functionality allows modifying existing expenses",
+        "Delete functionality removes expenses with confirmation",
+        "List updates in real-time after add, edit, or delete operations"
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "text": "Implement month and year selector in the frontend to allow users to view data for different months",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "monthly expenditure"
+        ]
+      },
+      "acceptanceCriteria": [
+        "User can select month and year from dropdown or calendar picker",
+        "Default selection is the current month and year",
+        "All dashboard data updates when selection changes",
+        "Selection persists during the session"
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "text": "Design a cohesive visual theme with warm, approachable colors (such as earthy tones or soft gradients), clean typography with good hierarchy for numbers and categories, and a card-based layout that separates summary metrics, category breakdown, and expense details into distinct, scannable sections",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Visual theme is consistent across all pages and components",
+        "Color scheme enhances readability and creates visual hierarchy",
+        "Layout is intuitive and makes financial data easy to scan",
+        "Typography clearly distinguishes monetary values from labels"
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "text": "Display generated images as static assets from frontend/public/assets/generated in the appropriate UI locations",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Generated images are properly loaded from the static assets directory",
+        "Images are displayed with appropriate sizing and positioning",
+        "Fallback handling exists if images fail to load"
+      ]
+    }
+  ],
+  "constraints": [
+    "All backend logic must be implemented in a single Motoko actor file",
+    "Frontend must use React with TypeScript, Tailwind CSS, and React Query",
+    "Do not modify immutable frontend paths: useInternetIdentity hooks, useActor.ts, main.tsx, and ui components"
+  ],
+  "nonGoals": [
+    "Multi-user authentication or user-specific data isolation",
+    "Export functionality to PDF or CSV",
+    "Recurring expense templates",
+    "Budget setting or alerts",
+    "Historical trend analysis across multiple months",
+    "Mobile-specific responsive optimizations beyond standard responsive design"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Financial growth illustration showing upward trend with coins or savings concept in warm tones (financial-growth.dim_400x300.png)",
+      "Category icons set including food, transport, entertainment, utilities, and shopping in a cohesive style (category-icons.dim_200x200.png)"
+    ],
+    "edits": []
+  }
+}

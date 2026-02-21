@@ -1,0 +1,22 @@
+{
+  "backend/main.mo": "Motoko actor implementing expense and earnings management with CRUD operations, monthly filtering, category-wise totals, and savings calculations using Map data structures.",
+  "feature_evidence.json": "Feature evidence report documenting five implemented frontend features (expense form, earnings form, category breakdown, monthly summary, expense list) with associated files, components, and test IDs.",
+  "frontend-file-summaries.txt": "JSON object containing one-line summaries of all frontend source files including components, hooks, and configuration files.",
+  "frontend/index.css": "Tailwind CSS configuration with custom OKLCH color palette defining warm amber/orange/rose theme variables for light and dark modes.",
+  "frontend/index.html": "HTML entry point for the Monthly Expenditure Tracker application with root div and module script reference.",
+  "frontend/src/App.tsx": "Main React application component orchestrating month/year selection, summary dashboard, category breakdown, and tabbed interface for expenses and earnings with themed layout and header.",
+  "frontend/src/components/CategoryBreakdown.tsx": "Component displaying expense breakdown by category with icons, progress bars, percentages, and amounts sorted by spending using predefined category colors and icons.",
+  "frontend/src/components/EarningsForm.tsx": "Form component for setting monthly earnings with month/year selectors, displays existing earnings if present, and validates input before submission.",
+  "frontend/src/components/ExpenseEditDialog.tsx": "Dialog component for editing existing expense entries with form fields for amount, category, description, and date.",
+  "frontend/src/components/ExpenseForm.tsx": "Form component for adding new expenses with predefined and custom categories, amount input, description textarea, and date picker.",
+  "frontend/src/components/ExpenseList.tsx": "Displays a sorted list of expenses for a given month/year with edit and delete actions, including confirmation dialogs.",
+  "frontend/src/components/MonthlySummary.tsx": "Dashboard component displaying three cards with monthly earnings, total expenses, and calculated savings/overspending with percentage indicators.",
+  "frontend/src/components/MonthYearSelector.tsx": "Reusable selector component with dropdowns for choosing month and year (current year ±5 years range).",
+  "frontend/src/hooks/useActor.ts": "Custom hook that creates and manages the backend actor instance based on Internet Identity authentication state, invalidating dependent queries when identity changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides React context and hooks for Internet Identity authentication, managing login state, identity persistence, and delegation validation with configurable AuthClient options.",
+  "frontend/src/hooks/useQueries.ts": "Defines React Query hooks for expense and earnings CRUD operations (add, update, delete, get) and monthly savings calculations, with automatic cache invalidation.",
+  "frontend/src/index.css": "Tailwind CSS configuration with custom CSS variables for light and dark themes using OKLCH color space, defining design tokens for UI components.",
+  "frontend/src/main.tsx": "Application entry point that sets up React Query client and Internet Identity provider, then renders the root App component.",
+  "frontend/tailwind.config.js": "Tailwind configuration extending the default theme with custom colors (using OKLCH), typography, animations, and design system tokens for a financial tracking UI.",
+  "project_state.json": "Project metadata tracking implemented features for a monthly expenditure tracker including expense forms, earnings management, category breakdowns, and dashboard UI with warm visual design."
+}

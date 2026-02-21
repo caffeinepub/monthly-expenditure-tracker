@@ -1,0 +1,40 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-21T17:14:42.844Z",
+  "summary": "The implementation comprehensively addresses all 14 requirements from the BuildRequest. All backend functions for expense and earnings management are present in the Motoko actor. The frontend includes all required forms, dashboards, and UI components with a cohesive warm color theme. However, there are some implementation gaps: backend date filtering is not yet functional (acknowledged with TODO comments), and there is no evidence of the required generated images being present or displayed in the appropriate locations.",
+  "missing_requirements": [
+    {
+      "id": "REQ-14",
+      "requirement": "Display generated images as static assets from frontend/public/assets/generated in the appropriate UI locations",
+      "reason": "No evidence of generated images (financial-growth.dim_400x300.png, category-icons.dim_200x200.png) being present in the diff. While MonthlySummary.tsx contains conditional logic to display a financial growth image, there is no evidence the actual image files exist or are properly loaded from the specified directory.",
+      "evidence": [
+        "frontend/src/components/MonthlySummary.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [],
+  "confidence": 0.85,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/CategoryBreakdown.tsx",
+    "frontend/src/components/EarningsForm.tsx",
+    "frontend/src/components/ExpenseEditDialog.tsx",
+    "frontend/src/components/ExpenseForm.tsx",
+    "frontend/src/components/ExpenseList.tsx",
+    "frontend/src/components/MonthYearSelector.tsx",
+    "frontend/src/components/MonthlySummary.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

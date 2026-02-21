@@ -1,0 +1,184 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Monthly Expenditure Tracker Frontend Implementation",
+  "requirements": [
+    {
+      "id": "REQ-7",
+      "summary": "Create expense entry form with amount, category, description, and date fields",
+      "acceptanceCriteria": [
+        "Form validates required fields before submission",
+        "Category can be selected from predefined options or entered as custom text",
+        "Date defaults to current date but can be changed",
+        "Success feedback is shown after successful submission"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/ExpenseForm.tsx",
+          "operation": "create",
+          "description": "Create a form component for adding expense entries with fields for amount (numeric), category (select/input combo), description (text), and date (date picker). Include form validation and call the addExpense backend method. Show success feedback after submission."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the ExpenseForm component into the main application layout so users can access it to add expenses."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Create monthly earnings form for setting earnings by month and year",
+      "acceptanceCriteria": [
+        "User can input monthly earnings amount",
+        "Month and year can be selected",
+        "Form validates positive numeric input",
+        "Success feedback is shown after saving"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/EarningsForm.tsx",
+          "operation": "create",
+          "description": "Create a form component for setting monthly earnings with fields for amount (positive numeric validation), month selector, and year selector. Call the setMonthlyEarnings backend method and display success feedback."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the EarningsForm component into the main application layout so users can set their monthly earnings."
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Create dashboard showing category-wise expense breakdown with totals and percentages",
+      "acceptanceCriteria": [
+        "Categories are listed with their total expense amounts",
+        "Percentage breakdown is calculated and displayed for each category",
+        "Data updates when a different month is selected",
+        "Visual representation makes it easy to compare categories"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/CategoryBreakdown.tsx",
+          "operation": "create",
+          "description": "Create a dashboard component that fetches expenses using getExpensesByMonthYear, groups them by category, calculates totals and percentages, and displays them in a card-based layout with visual hierarchy. Include category icons from frontend/public/assets/generated/category-icons.dim_200x200.png."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the CategoryBreakdown component into the main dashboard view and pass the selected month and year as props."
+        }
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "summary": "Create summary section showing earnings, expenses, and savings for selected month",
+      "acceptanceCriteria": [
+        "Shows monthly earnings prominently",
+        "Shows total expenses for the month",
+        "Shows calculated savings (earnings minus expenses)",
+        "Visual indicators distinguish positive savings from negative (overspending)",
+        "Updates when month selection changes"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/MonthlySummary.tsx",
+          "operation": "create",
+          "description": "Create a summary component that fetches monthly earnings using getMonthlyEarnings, calculates total expenses from getExpensesByMonthYear, and displays savings using getMonthlySavings. Use visual indicators (colors, icons) to distinguish positive savings from overspending. Display the financial-growth.dim_400x300.png image from frontend/public/assets/generated/financial-growth.dim_400x300.png when showing positive savings."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the MonthlySummary component into the dashboard view above or beside the category breakdown, passing selected month and year as props."
+        }
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "summary": "Create expense list view with edit and delete functionality",
+      "acceptanceCriteria": [
+        "All expenses for the selected month are listed",
+        "Each entry shows date, category, description, and amount",
+        "Edit functionality allows modifying existing expenses",
+        "Delete functionality removes expenses with confirmation",
+        "List updates in real-time after add, edit, or delete operations"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/ExpenseList.tsx",
+          "operation": "create",
+          "description": "Create a list component that displays all expenses for the selected month using getExpensesByMonthYear. Each item shows date, category, description, and amount with edit and delete buttons. Include inline editing or modal for updates using updateExpense, and confirmation dialog for deleteExpense. Use React Query for real-time updates."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the ExpenseList component into the dashboard view below the summary and breakdown sections, passing selected month and year as props."
+        }
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "summary": "Implement month and year selector for filtering dashboard data",
+      "acceptanceCriteria": [
+        "User can select month and year from dropdown or calendar picker",
+        "Default selection is the current month and year",
+        "All dashboard data updates when selection changes",
+        "Selection persists during the session"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/MonthYearSelector.tsx",
+          "operation": "create",
+          "description": "Create a month and year selector component using dropdowns or a date picker. Default to current month and year. Emit onChange events with selected month and year values. Use session storage or React state to persist selection."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the MonthYearSelector component at the top of the dashboard. Manage selected month and year in state and pass them to MonthlySummary, CategoryBreakdown, and ExpenseList components."
+        }
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "summary": "Design cohesive visual theme with warm colors, clean typography, and card-based layout",
+      "acceptanceCriteria": [
+        "Visual theme is consistent across all pages and components",
+        "Color scheme enhances readability and creates visual hierarchy",
+        "Layout is intuitive and makes financial data easy to scan",
+        "Typography clearly distinguishes monetary values from labels"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Define global CSS custom properties for warm, earthy color palette (e.g., soft oranges, browns, greens) and typography scale with clear hierarchy for financial numbers vs. labels. Ensure consistent spacing and card styling."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend Tailwind theme with custom color palette matching the warm, approachable visual theme. Configure typography plugin for number-specific font families and weights to enhance financial data readability."
+        }
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "summary": "Display generated images as static assets in appropriate UI locations",
+      "acceptanceCriteria": [
+        "Generated images are properly loaded from the static assets directory",
+        "Images are displayed with appropriate sizing and positioning",
+        "Fallback handling exists if images fail to load"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/MonthlySummary.tsx",
+          "operation": "modify",
+          "description": "Add an img element to display frontend/public/assets/generated/financial-growth.dim_400x300.png in the savings section with appropriate sizing (max-width and responsive classes). Include alt text and error handling for failed image loads."
+        },
+        {
+          "path": "frontend/src/components/CategoryBreakdown.tsx",
+          "operation": "modify",
+          "description": "Reference frontend/public/assets/generated/category-icons.dim_200x200.png for category visual indicators. Use sprite techniques or individual icon rendering based on category names with fallback handling."
+        }
+      ]
+    }
+  ]
+}

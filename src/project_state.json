@@ -1,0 +1,147 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Monthly expenditure tracker with category-wise expense tracking, detailed bifurcation, and savings calculation from total earnings",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Financial growth illustration showing upward trend with coins or savings concept in warm tones (financial-growth.dim_400x300.png)\n- Category icons set including food, transport, entertainment, utilities, and shopping in a cohesive style (category-icons.dim_200x200.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-frontend-form-to-add-new-expense-entries-with-fields-for-amount-category-description-and-date",
+      "title": "Create a frontend form to add new expense entries with fields for amount, category, description, and date",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-frontend-form-to-set-or-update-monthly-earnings-for-a-specific-month-and-year",
+      "title": "Create a frontend form to set or update monthly earnings for a specific month and year",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-frontend-dashboard-displaying-category-wise-expense-breakdown-for-the-selected-month-showing-each-category-with-its-total-amount-and-percentage-of-total-expenses",
+      "title": "Create a frontend dashboard displaying category-wise expense breakdown for the selected month, showing each category with its total amount and percentage of total expenses",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-frontend-summary-section-displaying-total-earnings-total-expenses-and-calculated-savings-for-the-selected-month",
+      "title": "Create a frontend summary section displaying total earnings, total expenses, and calculated savings for the selected month",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-frontend-list-view-displaying-all-individual-expense-entries-for-the-selected-month-with-options-to-edit-or-delete-each-entry",
+      "title": "Create a frontend list view displaying all individual expense entries for the selected month with options to edit or delete each entry",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-month-and-year-selector-in-the-frontend-to-allow-users-to-view-data-for-different-months",
+      "title": "Implement month and year selector in the frontend to allow users to view data for different months",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-design-a-cohesive-visual-theme-with-warm-approachable-colors-such-as-earthy-tones-or-soft-gradients-clean-typography-with-good-hierarchy-for-numbers-and-categories-and-a-card-based-layout-that-separates-summary-metrics-category-breakdown-and-expense-details-into-distinct-scannable-sections",
+      "title": "Design a cohesive visual theme with warm, approachable colors (such as earthy tones or soft gradients), clean typography with good hierarchy for numbers and categories, and a card-based layout that separates summary metrics, category breakdown, and expense details into distinct, scannable sections",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-generated-images-as-static-assets-from-frontend-public-assets-generated-in-the-appropriate-ui-locations",
+      "title": "Display generated images as static assets from frontend/public/assets/generated in the appropriate UI locations",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Track monthly expenditures by category",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Show detailed bifurcation of expenses",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Calculate and display savings from total earnings",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Create a backend data model to store expense entries with fields: id, amount, category, description, date, and timestamp",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Create a backend data model to store monthly earnings with fields: id, amount, month, year, and timestamp",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Implement backend functions to add, update, delete, and retrieve expense entries",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Implement backend functions to set and retrieve monthly earnings",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Implement backend function to calculate total expenses by category for a given month and year",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Implement backend function to calculate savings as the difference between monthly earnings and total expenses for a given month and year",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Monthly Expenditure Tracker",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

@@ -1,0 +1,13 @@
+{
+  "frontend/src/App.tsx": "Main application component with header, month/year selector, summary dashboard, category breakdown, and tabbed interface for expenses list and forms with warm gradient background and footer attribution.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for all backend operations including expenses (add, update, delete, get by month/year) and earnings (set, get) with automatic cache invalidation and client-side date filtering.",
+  "frontend/src/components/MonthYearSelector.tsx": "Dropdown selectors for month and year with current date as default, styled with warm amber theme.",
+  "frontend/src/components/MonthlySummary.tsx": "Dashboard cards displaying monthly earnings, total expenses, and calculated savings with visual indicators for positive/negative balance and conditional financial growth image display.",
+  "frontend/src/components/CategoryBreakdown.tsx": "Card component showing expense breakdown by category with icons, progress bars, percentages, and total amounts sorted by spending.",
+  "frontend/src/components/ExpenseList.tsx": "List view of all expenses for selected month with edit and delete functionality, confirmation dialogs, and date sorting.",
+  "frontend/src/components/ExpenseEditDialog.tsx": "Modal dialog for editing existing expense entries with form validation and update functionality.",
+  "frontend/src/components/ExpenseForm.tsx": "Form component for adding new expenses with amount, category (predefined or custom), description, and date fields with validation.",
+  "frontend/src/components/EarningsForm.tsx": "Form component for setting monthly earnings with month/year selectors and display of existing earnings for selected period.",
+  "frontend/src/index.css": "Global styles with warm, earthy OKLCH color palette (amber, orange, rose tones) for light and dark modes with proper contrast ratios.",
+  "frontend/tailwind.config.js": "Tailwind configuration with custom warm color palette, Poppins display font, and extended design tokens matching the financial tracker theme."
+}
